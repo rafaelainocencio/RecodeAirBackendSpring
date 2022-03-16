@@ -16,6 +16,9 @@ import com.recodeair.agencia.repositories.UserRepository;
 public class UserService {
 
 	@Autowired
+	private EmailService emailService;
+	
+	@Autowired
 	private UserRepository repository;
 
 	@Transactional(readOnly = true)
