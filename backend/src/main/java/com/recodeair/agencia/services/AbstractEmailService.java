@@ -26,8 +26,7 @@ public class AbstractEmailService implements EmailService {
 		sm.setFrom(sender);
 		sm.setSubject("Promoção de Dia dos Namorados!");
 		sm.setSentDate(new Date(System.currentTimeMillis()));
-		sm.setText("Confira todas as promoções direto no nosso site!  https://recodeair.netlify.app/");
-		sm.setText("*Site feito para a entrega de um trabalho da RecodePro. Todos os produtos e promoções são fictícias.*");
+		sm.setText("Confira todas as promoções direto no nosso site!  https://recodeair.netlify.app/"     "*Site feito para a entrega de um trabalho da RecodePro. Todos os produtos e promoções são fictícias.*");
 		return sm;
 	}
 
