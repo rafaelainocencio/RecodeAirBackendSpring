@@ -18,7 +18,7 @@ function FormCardPut({id}: Props){
     const[destino, setDestino] = useState<Destino>();
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/destinos/${id}`)
+        axios.get(`${BASE_URL}/destinos/${id}`)
         .then(response =>
             setDestino(response.data)
             )

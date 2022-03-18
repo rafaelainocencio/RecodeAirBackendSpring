@@ -3,6 +3,7 @@ import axios from "axios";
 import { Destino } from "componentes/types/destino";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "Utils/requests";
 
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 function deleteDestino(id: number) {
         console.log(id)
-        axios.delete(`http://localhost:8080/destinos/${id}`)
+        axios.delete(`${BASE_URL}/destinos/${id}`)
         window.location.reload()
 }
 

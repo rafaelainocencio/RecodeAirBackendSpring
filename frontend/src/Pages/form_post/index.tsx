@@ -21,7 +21,7 @@ function FormPost() {
         const imagem = (event.target as any).imagem.value;
         const preco = (event.target as any).preco.value;
 
-        /*window.location.reload()*/
+        window.location.reload()
         
         
 
