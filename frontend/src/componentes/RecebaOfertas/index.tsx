@@ -15,7 +15,7 @@ export default function RecebaOfertas() {
         const nome = (event.target as any).nome.value;
         const email = (event.target as any).email.value;
 
-        window.location.reload()
+        //window.location.reload()
 
 
         const config: AxiosRequestConfig = {
