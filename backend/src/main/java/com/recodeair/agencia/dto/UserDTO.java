@@ -1,5 +1,9 @@
 package com.recodeair.agencia.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.recodeair.agencia.entities.Pedido;
 import com.recodeair.agencia.entities.User;
 
 public class UserDTO {
@@ -10,15 +14,19 @@ public class UserDTO {
 	private String telefone;
 	private String senha;
 	
+	private List<Pedido> pedidos = new ArrayList<>();
+	
 	public UserDTO() {
 	}
 
-	public UserDTO(Long id, String nome, String email, String telefone, String senha) {
+	public UserDTO(Long id, String nome, String email, String telefone, String senha, List<Pedido> pedidos) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;
 		this.senha = senha;
+		this.pedidos = pedidos;
+		
 	}
 	
 	public UserDTO(User user) {
@@ -27,6 +35,7 @@ public class UserDTO {
 		email = user.getEmail();
 		telefone = user.getTelefone();
 		senha = user.getSenha();
+		pedidos = user.getPedidos();
 	}
 
 	public Long getId() {
@@ -68,6 +77,11 @@ public class UserDTO {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
 }
 
 	//public UserDTO(User x) {

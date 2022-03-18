@@ -8,7 +8,7 @@ import com.recodeair.agencia.services.EmailService;
 import com.recodeair.agencia.services.SmtpEmailService;
 
 @Configuration
-@Profile("test")
+@Profile("dev") //mudar para test
 public class TestConfig {
 
 	@Bean

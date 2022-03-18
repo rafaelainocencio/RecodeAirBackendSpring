@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -26,19 +29,27 @@ public class Pedido implements Serializable {
 	private Instant moment;
 	
 	
+	
 	@ManyToOne
-	//@JsonIgnore
+	@JsonIgnore
+	@JoinColumn(name = "destino_id")
+	private Destino destino;
+	
+	
+	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name = "client_id")
 	private User client;
 	
 	public Pedido() {
 	}
 
-	public Pedido(Long id, Instant moment, User client) {
+	public Pedido(Long id, Instant moment, User client, Destino destino) {
 		super();
 		this.id = id;
 		this.moment = moment;
 		this.client = client;
+		this.setDestino(destino);
 	}
 
 	public Long getId() {
@@ -65,6 +76,8 @@ public class Pedido implements Serializable {
 		this.client = client;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -81,7 +94,12 @@ public class Pedido implements Serializable {
 		Pedido other = (Pedido) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
+	public Destino getDestino() {
+		return destino;
+	}
+
+	public void setDestino(Destino destino) {
+		this.destino = destino;
+	}
 }

@@ -1,13 +1,19 @@
 package com.recodeair.agencia.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name= "tb_destino")
@@ -22,6 +28,11 @@ public class Destino implements Serializable {
 	private String descricao;
 	private String imagem;
 	private Double preco;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "destino", cascade = CascadeType.ALL)
+	private Set<Pedido> pedidos = new HashSet<>();
+	
 	
 	public Destino() {
 	}
@@ -91,7 +102,8 @@ public class Destino implements Serializable {
 		Destino other = (Destino) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
+	public Set<Pedido> getPedidos() {
+		return pedidos;
+	}
 }

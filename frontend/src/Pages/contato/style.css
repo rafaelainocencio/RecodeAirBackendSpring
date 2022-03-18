@@ -1,0 +1,19 @@
+.container-contatos{
+    margin: 100px;
+    padding: 50px;
+    background-color: #FFC93C;
+    width: 80%;
+    border-radius: 10px;
+    max-width: 1670px;
+}
+
+#titContato{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container p{
+    font-size: 20px;
+    text-align: center;
+}

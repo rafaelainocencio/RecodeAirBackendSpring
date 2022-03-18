@@ -1,6 +1,14 @@
 package com.recodeair.agencia.dto;
 
+
+import java.util.HashSet;
+
+import java.util.Set;
+
+
+
 import com.recodeair.agencia.entities.Destino;
+import com.recodeair.agencia.entities.Pedido;
 
 public class DestinoDTO {
 	
@@ -10,15 +18,21 @@ public class DestinoDTO {
 	private String imagem;
 	private Double preco;
 	
+	
+	private Set<Pedido> pedidos = new HashSet<>();
+	
+	
+	
 	public DestinoDTO() {
 	}
 
-	public DestinoDTO(Long id, String nome, String descricao, String imagem, Double preco) {
+	public DestinoDTO(Long id, String nome, String descricao, String imagem, Double preco, Set<Pedido> pedidos) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.imagem = imagem;
 		this.preco = preco;
+		this.pedidos = pedidos;
 	}
 	
 	public DestinoDTO(Destino destino) {
@@ -27,6 +41,7 @@ public class DestinoDTO {
 		descricao = destino.getDescricao();
 		imagem = destino.getImagem();
 		preco = destino.getPreco();
+		pedidos = destino.getPedidos();
 	}
 
 	public Long getId() {
@@ -67,5 +82,9 @@ public class DestinoDTO {
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}
+
+	public Set<Pedido> getPedidos() {
+		return pedidos;
 	}
 }

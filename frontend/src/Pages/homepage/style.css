@@ -1,0 +1,49 @@
+.btn{
+    margin: 10px;
+}
+
+.cardForm{
+    margin: 20px;
+    margin-top: 90px;
+    max-height: 400px;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+    color: azure;
+}
+
+.janela{
+    margin-top: 1%;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(8px);
+    border: 1px solid grey;
+    border-radius: 10px;
+    
+}
+
+.banner{
+    display: flex;
+    width: 1920px;
+    background-image: url(../../Assets/pexels-kammeran-gonzalezkeola-7525655.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    height: fit-content;
+    height: 500px;
+}
+
+.Lorem{
+    color: azure;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel{
+    width: 300px;
+}
+
+.texto{
+    text-align: left;
+}
+

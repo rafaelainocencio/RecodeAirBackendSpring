@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+* {
+  /*box-sizing: border-box;*/
+  font-family: 'Dosis';
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+header{
+  background-color: darkturquoise;
+  font-size: xx-large;
+}
+
+header nav div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer{
+  height: 30px;
+  text-align: center;
+}
+
+.desContainer{
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+
+
+}
+
+.destinos-card{
+  width: 200px ;
+  height: 400px;
+}
+
+.principal{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  }
+
+  .pagination-container{
+    display: flex;
+    justify-content: center;
+  }

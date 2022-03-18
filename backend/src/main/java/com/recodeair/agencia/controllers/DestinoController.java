@@ -3,7 +3,6 @@ package com.recodeair.agencia.controllers;
 import com.recodeair.agencia.entities.Destino;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

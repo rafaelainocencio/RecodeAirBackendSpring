@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 
 import com.recodeair.agencia.entities.Assinante;
-import com.recodeair.agencia.entities.User;
+
 
 public class AbstractEmailService implements EmailService {
 	
@@ -22,17 +22,15 @@ public class AbstractEmailService implements EmailService {
 
 	protected SimpleMailMessage prepareSimpleMailMessageFromUser(Assinante obj) {
 		SimpleMailMessage sm = new SimpleMailMessage();
-		sm.setTo("rafaelainocencioo@gmail.com");
+		sm.setTo(obj.getEmail());
 		sm.setFrom(sender);
 		sm.setSubject("Promoção de Dia dos Namorados!");
 		sm.setSentDate(new Date(System.currentTimeMillis()));
 		sm.setText("Confira todas as promoções direto no nosso site!");
+		sm.setText("*Site feito para a entrega de um trabalho da RecodePro. Todos os produtos e promoções são fictícias.*");
 		return sm;
 	}
 
-	
-	
-	
 	
 	@Override
 	public void sendEmail(SimpleMailMessage msg) {

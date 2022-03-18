@@ -1,0 +1,17 @@
+.promocoes-container{
+    display: flex;
+}
+
+.destinos-card{
+    height: fit-content;
+    min-width: 200px;
+
+}
+
+.prom{
+    display: flex;
+}
+
+h2{
+    text-align: center;
+}

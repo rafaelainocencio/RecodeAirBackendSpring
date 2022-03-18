@@ -42,7 +42,7 @@ public class PedidoService {
 	}
 
 	public Pedido fromDTO(PedidoDTO objDto) {
-		return new Pedido(objDto.getId(), objDto.getMoment(), objDto.getClient());
+		return new Pedido(objDto.getId(), objDto.getMoment(), objDto.getClient(), objDto.getDestino());
 	}
 
 	@Transactional
