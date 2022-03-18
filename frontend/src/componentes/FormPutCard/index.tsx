@@ -18,7 +18,7 @@ function FormCardPut({id}: Props){
     const[destino, setDestino] = useState<Destino>();
 
     useEffect(() => {
-        axios.get(`https://recodeair.netlify.app//destinos/${id}`)
+        axios.get(`https://recodeair.netlify.app/destinos/${id}`)
         .then(response =>
             setDestino(response.data)
             )

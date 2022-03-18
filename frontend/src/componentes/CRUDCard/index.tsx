@@ -13,7 +13,7 @@ type Props = {
 
 function deleteDestino(id: number) {
         console.log(id)
-        axios.delete(`https://recodeair.netlify.app//destinos/${id}`)
+        axios.delete(`https://recodeair.netlify.app/destinos/${id}`)
         window.location.reload()
 }
 
