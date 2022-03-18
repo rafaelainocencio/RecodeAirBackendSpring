@@ -19,7 +19,7 @@ export default function RecebaOfertas() {
 
 
         const config: AxiosRequestConfig = {
-            baseURL: BASE_URL,
+            baseURL: "https://recodeair.netlify.app/",
             method: 'POST',
             url: '/assinantes',
             data: {
