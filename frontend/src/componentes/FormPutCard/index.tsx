@@ -46,7 +46,6 @@ function FormCardPut({id}: Props){
         preco = (preco == "" ? preco = precoAntigo : preco = preco)
         
 
-        //console.log(nome)
 
         //window.location.reload()
         

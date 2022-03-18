@@ -1,7 +1,6 @@
 
 import axios from "axios";
 import { Destino } from "componentes/types/destino";
-//import { useRef } from "react";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -14,7 +13,7 @@ type Props = {
 function deleteDestino(id: number) {
         console.log(id)
         axios.delete(`http://localhost:8080/destinos/${id}`)
-        window.location.reload()
+        /*window.location.reload()*/
 }
 
 export default function CRUDCard ({destino}:  Props) {
