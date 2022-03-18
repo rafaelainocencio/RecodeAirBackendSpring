@@ -26,7 +26,7 @@ function FormPost() {
         
 
         const config: AxiosRequestConfig = {
-            baseURL: BASE_URL,
+            baseURL: "https://recodeair.netlify.app/",
             method: 'POST',
             url: '/destinos',
             data:{
