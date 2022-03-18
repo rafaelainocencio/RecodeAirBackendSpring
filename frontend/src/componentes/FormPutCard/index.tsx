@@ -47,7 +47,7 @@ function FormCardPut({id}: Props){
         
 
 
-        //window.location.reload()
+        window.location.reload()
         
 
         const config: AxiosRequestConfig = {
