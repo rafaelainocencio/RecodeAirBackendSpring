@@ -8,8 +8,8 @@ import com.recodeair.agencia.services.EmailService;
 import com.recodeair.agencia.services.SmtpEmailService;
 
 @Configuration
-@Profile("test")
-public class TestConfig {
+@Profile("dev")
+public class prodConfig {
 
 	@Bean
 	public EmailService emailService() {
