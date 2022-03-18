@@ -29,8 +29,8 @@ export default function RecebaOfertas() {
         }
 
         axios(config).then(response => {
-            alert("O destino: " + nome + " foi adicionado com sucesso.");
-            console.log("funcionando normal aqui")
+            alert(`Confira seu email!`);
+            alert(`É SÉRIO, GUILHERME, VAI CONFERIR SEU EMAIL AGORAA`)
         });
     }
 
@@ -50,8 +50,4 @@ export default function RecebaOfertas() {
             </form>
         </div>
     )
-}
-
-function assinar() {
-    alert("Assinado com sucesso!")
 }
